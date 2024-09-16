@@ -6,10 +6,13 @@
   /* COLORS */
 
   --color-green-dark: hsl(192, 37%, 48%);
+  --color-green-dark--hover: hsl(192, 39%, 61%);
+
   --color-green-light: hsl(192, 90%, 77%);
   --color-grey-dark: hsl(240, 21%, 20%);
   --color-grey: hsl(240, 10%, 57%);
   --color-violet-dark: hsl(268, 34%, 53%);
+  --color-violet-dark--hover: hsl(268, 39%, 58%);
   --color-violet-light: hsl(268, 100%, 86%);
   --color-white: hsl(0, 0%, 98%);
 
@@ -125,6 +128,7 @@ html {
 }
 
 .btn__download {
+  transition: background-color .5s ease;
   background-color: var(--color-green-dark);
   width: 193px;
 }
@@ -135,6 +139,7 @@ html {
 }
 
 .btn__download--violet {
+  transition: background-color .5s ease;
   background-color: var(--color-violet-dark);
 }
 
@@ -280,6 +285,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
   width: 20.4rem;
 }
@@ -312,6 +318,7 @@ html {
   border: none;
   color: var(--color-white);
   padding: 1rem 0;
+  
 }
 
 /****************\
@@ -325,12 +332,12 @@ html {
 #Tablet L - 768px - M
 \******************/
 
-@media (768px < width) {
+@media (767px < width) {
   .container__images {
-    width: 80%;
+    width: 85%;
     margin: 4rem auto 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   .container__footer {
@@ -363,7 +370,19 @@ html {
     width: 573px;
     margin-bottom: 2.5rem;
   }
+
+  .head__info__btn {
+    flex-direction: row;
+  }
+
+  .head__info__text {
+    width: 28.5rem;
+  }
   
+  .info__body__text {
+    width: 35rem;
+    font-size: .95rem;
+  }
 }
 
 /******************\
@@ -408,7 +427,7 @@ html {
   }
 
   .container__footer__text {
-    font-size: 1rem;
+    font-size: 1.15rem;
   }
 
 
@@ -418,12 +437,21 @@ html {
   }
 
   .container__images {
-    width: 70%;
+    width: 100%;
+  }
+
+  .btn__hover--green:hover {
+    
+    background-color: var(--color-green-dark--hover);
+  }
+
+  .btn__hover--violet:hover {
+    background-color: var(--color-violet-dark--hover);
   }
 
   .head__image {
     position: relative;
-    width: 25%;
+    width: 30%;
   }
 
   .head__image--left {
@@ -437,7 +465,7 @@ html {
   }
 
   .head__info__title {
-    font-size: 3.5rem;
+    font-size: 3.4rem;
     line-height: 64px;
     text-align: center;
     font-weight: 900;
@@ -454,11 +482,21 @@ html {
 
   .info__btn {
     padding: 0.75rem 0;
+    cursor: pointer;
   }
 
-  .head__info__btn {
-    flex-direction: row;
+  .info__body__text {
+    width: 40rem;
+    font-size: 1.15rem;
+}
+
+  .images__image {
+    width: 255px;
+    height: auto;
+    place-self: center;
+    border-radius: 0.5rem;
   }
+  
 }
 
 /*********************\
